@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileText, Building2, Briefcase, Calendar, AlignLeft, Sparkles, LayoutDashboard, Target, TrendingUp, ShieldCheck, Loader2 } from 'lucide-react';
+import { FileText, Building2, Briefcase, Calendar, AlignLeft, Sparkles, LayoutDashboard, ShieldCheck, Loader2 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 
 interface ReportData {
@@ -44,7 +44,7 @@ function App() {
       }
       
       const text = await response.text();
-      let data: Partial<ReportData> = {};
+      let data: Record<string, any> = {};
       
       try {
         const json = JSON.parse(text);
