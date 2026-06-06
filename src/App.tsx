@@ -15,10 +15,10 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
 
   const [formData, setFormData] = useState({
-    reportType: 'Procurement Analysis',
+    reportType: '',
     companyName: '',
-    industry: 'Discrete Manufacturing',
-    timePeriod: 'Last Month',
+    industry: '',
+    timePeriod: '',
     additionalNotes: ''
   });
 
@@ -142,6 +142,7 @@ function App() {
                 onChange={handleInputChange}
                 className="w-full bg-slate-50 border border-slate-200 text-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all shadow-sm"
               >
+                <option value="" disabled>Select Report Type</option>
                 <option value="Procurement Analysis">Procurement Analysis</option>
                 <option value="Vendor Quality Report">Vendor Quality Report</option>
                 <option value="Engineering Feasibility">Engineering Feasibility</option>
@@ -177,10 +178,15 @@ function App() {
                 onChange={handleInputChange}
                 className="w-full bg-slate-50 border border-slate-200 text-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all shadow-sm"
               >
+                <option value="" disabled>Select Industry</option>
+                <option value="Heavy Industries">Heavy Industries</option>
                 <option value="Discrete Manufacturing">Discrete Manufacturing</option>
-                <option value="Heavy Engineering">Heavy Engineering</option>
-                <option value="Infrastructure">Infrastructure</option>
-                <option value="Process Industry">Process Industry</option>
+                <option value="Oil & Gas">Oil & Gas</option>
+                <option value="Melting, Heating & Welding Industry">Melting, Heating & Welding Industry</option>
+                <option value="Pipe Manufacturing, Cutting/Shearing">Pipe Manufacturing, Cutting/Shearing</option>
+                <option value="Material Handling">Material Handling</option>
+                <option value="Food & Pharma">Food & Pharma</option>
+                <option value="Special Purpose Machinery">Special Purpose Machinery</option>
               </select>
             </div>
 
@@ -196,6 +202,7 @@ function App() {
                 onChange={handleInputChange}
                 className="w-full bg-slate-50 border border-slate-200 text-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all shadow-sm"
               >
+                <option value="" disabled>Select Time Period</option>
                 <option value="Last Week">Last Week</option>
                 <option value="Last Month">Last Month</option>
                 <option value="Last Quarter">Last Quarter</option>
